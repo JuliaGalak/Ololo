@@ -26,8 +26,14 @@ body {
     height: 147px;
     display: flex;
     align-items: center;
-    background-color: rgba(222, 222, 222, 0.5);
+    background-color: rgba(222, 222, 222, 0.98);
     z-index: 100;
+}
+@supports (backdrop-filter: blur(10px)){
+    .page-header {
+        background: rgba(222, 222, 222, 0.5);
+        backdrop-filter: blur(10px);
+    }
 }
 
 .page-header_container {
@@ -182,4 +188,43 @@ body {
     line-height: 33px;
     text-decoration: underline transparent;
     transition: color 0.2s, text-decoration-color 0.2s;
+}
+
+.event {
+    padding: 40px 0 150px;
+}
+
+.reserve {
+    display: grid;
+    gap: 67px 150px;
+    width: 100%;
+    grid-template-columns: 405px calc(89% - 405px);
+    grid-template-areas: 
+      "checkbox scheme"
+      "order legend"; 
+    width: 100%;
+}
+
+.reserve__checkbox {
+    grid-area: checkbox;
+    background-color: #BC3324;
+    height: 100px;
+}
+
+.reserve__order {
+    grid-area: order;
+    background-color: aquamarine;
+    height: 100px;
+}
+
+.reserve__scheme {
+    grid-area: scheme;
+    background-color: teal;
+    height: 100px;
+}
+
+.reserve__legend {
+    grid-area: legend;
+    background-color: blue;
+    height: 100px;
 }
