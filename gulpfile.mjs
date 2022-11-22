@@ -16,7 +16,9 @@ import imagemin_mozjpeg from "imagemin-mozjpeg";
 import imagemin_optipng from "imagemin-optipng";
 import svgmin from "gulp-svgmin";
 import svgstore from "gulp-svgstore";
+
 import server from "browser-sync";
+
 
 const resources = {
     html: "src/html/**/*.html",
@@ -151,4 +153,36 @@ const resources = {
     svgSprite
   );
 
-  
+  function reloadServer(done) {
+    server.reload();
+    done();
+  }
+
+  function serve() {
+    server.init({
+      server: "dist"
+    });
+    gulp.watch(resources.html, gulp.series(includeHtml, reloadServer));
+    gulp.watch(resources.less, gulp.series(style, reloadServer));
+    gulp.watch(resources.jsDev, gulp.series(js, reloadServer));
+    gulp.watch(resources.jsVendor, gulp.series(jsCopy, reloadServer));
+    gulp.watch(resources.static, { delay: 500 }, gulp.series(copy, reloadServer));
+    gulp.watch(resources.images, { delay: 500 }, gulp.series(images, reloadServer));
+    gulp.watch(resources.svgSprite, gulp.series(svgSprite, reloadServer));
+  }
+
+  const start = gulp.series(build, serve);
+
+  export {
+    clean,
+    copy,
+    includeHtml,
+    style,
+    js,
+    jsCopy,
+    images,
+    svgSprite,
+    build,
+    serve,
+    start
+  };
