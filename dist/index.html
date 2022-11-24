@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
 
   <title>Lenni Art</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,27 +13,61 @@
 
 <body class="body">
   <header class="page-header">
-    <div class="page-header_container">
-      <a href="index.html" class="page-header_logo">
-        <svg class="page-header_logo-icon" width="202" height="147">
+    <div class="page-header__container">
+      <a href="index.html" class="page-header__logo">
+        <svg class="page-header__logo-icon" width="202" height="147">
           <use xlink:href="assets/icons/symbols.svg#logo"></use>
         </svg>
       </a>
 
-      <nav class="page-header_nav">
-        <a href="#" class="page-header_nav-link">Мероприятия</a>
-        <a href="#" class="page-header_nav-link">Блог</a>
-        <a href="#" class="page-header_nav-link">О нас</a>
-        <a href="#" class="page-header_nav-link">Контакты</a>
+      <nav class="page-header__nav">
+        <a href="#" class="page-header__nav-link">Мероприятия</a>
+        <a href="#" class="page-header__nav-link">Блог</a>
+        <a href="#" class="page-header__nav-link">О нас</a>
+        <a href="#" class="page-header__nav-link">Контакты</a>
       </nav>
 
-      <div class="page-header_right-block"></div>
-      <a href="#" class="page-header_btn btn">Войти</a>
+      <div class="page-header__right-block"></div>
+      <a href="#" class="page-header__btn btn">Войти</a>
     </div>
   </header>
   <main class="main">
     <div class="home">
+      <div class="blog-listing" @@class>
+        <h2 class="blog-listing__section-title section-title">
+          Блог
+        </h2>
+        <div class="blog-listing__list">
+          <!-- prettier-ignore -->
+          <div class="blog-card">
+            <a href="#" class="blog-card__link">
+              <pucture class="blog-card__pucture">
+                <img src="srcassets/images/blog/blog1.jpg" alt="" class="blog-card__img" />
+              </pucture>
+            </a>
+            <div class="blog-card__info">
+              <time class="blog-card__info-time" datetime="2022-11-26">
+                26.11.2022
+              </time>
+              <a href="#" class="blog-card__title-link">
+                <h4 class="blog-card__title">
+                  Фотосессия в стенах Театра драмы
+                </h4>
+                <div class="blog-card__arrow-right">
+                  <svg class="blog-card__icon" width="91" height="60">
+                    <use xlink:href="assets/icons/symbols.svg#arrow-right"></use>
+                  </svg>
+                </div>
+              </a>
+              <p class="blog-card__text">
+                Организовывая фотосессию для локального бренда одежды мы смогли воплотить все пожелания заказчика и у нас получилась отличная работа. Смотрите как это было
+              </p>
 
+
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
   </main>
