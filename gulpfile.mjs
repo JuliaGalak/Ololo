@@ -25,17 +25,17 @@ const resources = {
     less: "src/styles/**/*.less",
     jsDev: "src/scripts/dev/**/*.js",
     jsVendor:"src/scripts/vendor/**/*.js",
+    images: "src/assets/images/**/*.{png, jpg, jpeg, webp, gif, svg}",
+    svgSprite: "src/assets/svg-sprite/*.svg",
     static: [
       "src/assets/icons/**/*.*",
-    "src/assets/favicons/**/*.*",
-    "src/assets/fonts/**/*.{woff,woff2}",
-    "src/assets/video/**/*.{mp4,webm}",
-    "src/assets/audio/**/*.{mp3,ogg,wav,aac}",
-    "src/json/**/*.json",
-    "src/php/**/*.php"
-    ],
-    images: "src/assets/images/**/*.{png, jpg, jpeg, webp, gif, svg}",
-    svgSprite: "src/assets/svg-sprite/*.svg"
+      "src/assets/favicons/**/*.*",
+      "src/assets/fonts/**/*.{woff,woff2}",
+      "src/assets/video/**/*.{mp4,webm}",
+      "src/assets/audio/**/*.{mp3,ogg,wav,aac}",
+      "src/json/**/*.json",
+      "src/php/**/*.php"
+    ] 
   };
 
   function clean() {
