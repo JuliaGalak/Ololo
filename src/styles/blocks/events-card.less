@@ -1,11 +1,10 @@
 .events-card {
     display: flex;
-    width: 100%;
-    margin: 0 30px 120px;
+    margin: 0 30px 60px;
     max-width: 405px;
     min-width: 280px;
     width: calc(33.333% - 60px);
-
+    
     &_link {
         display: flex;
         flex-direction: column;
@@ -15,9 +14,12 @@
     
     &_picture{
         display: block;
-        width: 100%;
         position: relative;
-        margin-bottom: 25px;
+        width: 100%;
+        margin: 0 0 25px;
+        font-size: 0;
+        text-decoration: none;
+        overflow: hidden;
    
         &::before{
             content: "";
