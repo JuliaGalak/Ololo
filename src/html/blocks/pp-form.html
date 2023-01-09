@@ -3,25 +3,25 @@
         <form class="form">
             <div class="form__radio radio">
                 <label class="radio__item">
-                    <input type="radio" class="radio__input">
+                    <input type="radio" class="radio__input" name="формат" value="семинар" checked>
                     <span class="radio__mark"></span>
                     <span class="radio__mame">Мастер-класс/семинар</span>
                 </label>
 
                 <label class="radio__item">
-                    <input type="radio" class="radio__input">
+                    <input type="radio" class="radio__input" name="формат" value="концерт">
                     <span class="radio__mark"></span>
                     <span class="radio__mame">Концерт/выступление</span>
                 </label>
 
                 <label class="radio__item">
-                    <input type="radio" class="radio__input">
+                    <input type="radio" class="radio__input" name="формат" value="выставка">
                     <span class="radio__mark"></span>
                     <span class="radio__mame">Выставка/показ</span>
                 </label>
 
                 <label class="radio__item">
-                    <input type="radio" class="radio__input">
+                    <input type="radio" class="radio__input" name="формат" value="другое">
                     <span class="radio__mark"></span>
                     <span class="radio__mame">Другое</span>
                 </label>
@@ -73,6 +73,16 @@
                 </span>
                 <textarea class="field__textarea" name="comment" ></textarea>      
             </label>
+
+            <label class="check">
+                <input type="checkbox" class="check__input" name="согласие" required checked/>
+                <span class="check__mark"></span>
+                <span class="check__label">
+                    Я соглашаюсь с пользовательским соглашением и с политикой использования персональных данных
+                </span>
+            </label>
+            <button type="submit" class="btn">Отправить</button>
+            <button type="button" class="form__close-btn">Закрыть</button>
         </form>
     </div>
 </div>
