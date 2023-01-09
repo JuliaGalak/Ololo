@@ -11,7 +11,7 @@ body {
     flex-direction: column;  /*вертикальное положенеи*/
     min-height: 100vh;
     padding-top: 147px;
-    background-color: @grey;  
+    background-color: @gray;  
     background-image: url(../assets/images/noise.png);
     background-position: 0 0, 0 0;
     background-size: auto, 100% auto;
@@ -45,8 +45,9 @@ img {
   }
 
   input,
-  textarea,
-  select{
+textarea,
+button,
+select{
     box-shadow: none;
     outline: none;
     color: @black;
@@ -60,11 +61,15 @@ img {
   input,
   textarea{
     &::placeholder{
-        color: @grey3;  //подсказка
+        color: @gray3;  //подсказка
     }
     &:focus{
         &::placeholder{
             color: transparent;
     }
   }
+}
+
+button {
+  cursor: pointer;
 }
