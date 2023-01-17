@@ -6,9 +6,10 @@
     align-items: flex-start;
     min-height: 24px;
     padding-top: 2px;
-    padding-left: 40px;
+    padding-left: 25px;
     color: @black;
     cursor: pointer;
+    margin-bottom: 13px;
 
     &__input {
         .is-hidden();     //прячем
@@ -51,5 +52,24 @@
       font-size: 14px;
       line-height: 19px;
     }
+  }
+
+  &--red {
+    color: @red;
+    margin-bottom: 13px;
+    .check__mark {
+      border-color: @red;
+    }
+    .check__input {
+      &:checked {
+        & ~ .check__mark {
+          background-color: @red;
+        }
+      }
+    }
+  }
+  &--disabled {
+    pointer-events: none;
+    opacity: 0.5;
   }
 }

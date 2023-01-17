@@ -1,14 +1,16 @@
 <div class="blog-card" @@class>
-    <a href="#" class="blog-card__link">
+    <a href="#" title="img" class="blog-card__link">
         <pucture class="blog-card__pucture">
             <img src="@@img" alt="" class="blog-card__img" />
         </pucture>
+        <img src="@@img" alt="" class="blog-card__img" />
+
     </a>
     <div class="blog-card__info">
-        <time class="blog-card__info-time" datetime="2022-11-26">
-            26.11.2022
+        <time class="blog-card__info-time" datetime=@@datetime>
+            @@time
         </time>
-        <a href="#" class="blog-card__title-link">
+        <a href="#" title="text" class="blog-card__title-link">
             <h4 class="blog-card__title">
                 @@title
             </h4>
