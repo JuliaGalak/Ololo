@@ -5,6 +5,18 @@ body {
     width: 100%;
 }
 
+.width_624 {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 624px;
+  @media @bw1660 {
+    max-width: 604px;
+  }
+  @media @bw1340 {
+    max-width: 566px;
+  }
+}
+
 body {
     box-sizing: border-box;
     display: flex;
@@ -22,6 +34,13 @@ body {
     line-height: 1.375;
     color: @black;
     overflow-x: hidden;
+    @media @bw1660 {
+      padding-top: 111px;
+    }
+  
+    @media @bw768 {
+      padding-top: 70px;
+    }
 }
 
 .main {
@@ -32,10 +51,9 @@ body {
     flex: 0 0 auto;  /*не растягивается, не сжимается, высота авто*/
 }
 
-a{
-    color: @black;
-    outline: none;
-    text-decoration: none;
+a {
+  color: @black;
+  outline: none;
 }
 
 img {
